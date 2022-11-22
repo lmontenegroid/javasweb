@@ -18,10 +18,10 @@ public class Ejercicio1 {
 				+ "aplicarán las cuatro operaciones en orden n1 n2.");
 		
 		System.out.println("Ingrese el primer valor");
-		numero1 = teclado.nextDouble();
+		numero1 = teclado.nextFloat();
 		
 		System.out.println("Ingrese el segundo valor");
-		numero2 = teclado.nextDouble();
+		numero2 = teclado.nextInt();
 		
 		System.out.println("Suma: " + (numero1+numero2)
 				+ "\nResta: " + (numero1-numero2)

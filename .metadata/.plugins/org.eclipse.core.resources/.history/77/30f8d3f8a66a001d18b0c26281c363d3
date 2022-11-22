@@ -21,7 +21,7 @@ public class Ejercicio1 {
 		numero1 = teclado.nextDouble();
 		
 		System.out.println("Ingrese el segundo valor");
-		numero2 = teclado.nextDouble();
+		numero2 = teclado.next*/();
 		
 		System.out.println("Suma: " + (numero1+numero2)
 				+ "\nResta: " + (numero1-numero2)
