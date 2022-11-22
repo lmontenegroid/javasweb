@@ -1,0 +1,15 @@
+package clase1;
+
+public class Ejercicio1 {
+	
+	public static void main(String[] args) {
+		/*
+		 1- Declare e inicie dos variables que permitan realizar y mostrar
+		 en consola las operaciones básicas matemáticas (suma, resta,
+		 multiplicación y división).
+		 */
+		
+		
+	}
+
+}
