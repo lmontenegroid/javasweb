@@ -1,0 +1,7 @@
+package clase1;
+
+import junit.framework.TestCase;
+
+public class TesteEjercicio1 extends TestCase{
+
+}
