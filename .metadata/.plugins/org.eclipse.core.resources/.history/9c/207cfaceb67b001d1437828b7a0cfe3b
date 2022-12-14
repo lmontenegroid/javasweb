@@ -1,0 +1,71 @@
+package clase1;
+
+import java.util.Scanner;
+
+public class Clase1 {
+
+	static Scanner teclado = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		operaciones();
+
+	}
+
+	/*
+	 * 1- Declare e inicie dos variables que permitan realizar y mostrar en consola
+	 * las operaciones básicas matemáticas (suma, resta, multiplicación y división).
+	 */
+	public static void operaciones() {
+		double numero1, numero2; // declaración de variables
+
+		System.out.println(
+				"El usuario va a ingresar dos valores y se le " + "aplicarán las cuatro operaciones en orden n1 n2.");
+
+		System.out.println("Ingrese el primer valor");
+		numero1 = teclado.nextDouble();
+
+		System.out.println("Ingrese el segundo valor");
+		numero2 = teclado.nextDouble();
+
+		System.out.println("Suma: " + (numero1 + numero2) + "\nResta: " + (numero1 - numero2) + "\nMultiplicación: "
+				+ (numero1 * numero2) + "\nDivisión: " + (numero1 / numero2));
+	}
+
+	/*
+	 * 2- Declare e inicie cuatro variables y muestre el promedio de ellas.
+	 */
+	public static double promedio(double n1, double n2, double n3, double n4) {
+		return (n1 + n2 + n3 + n4) / 4;
+	}
+
+	// Declare e inicie 3 variables enteras y compare cual de las 3 es la mayor.
+	public static double mayor(double n1, double n2) {
+		return Math.max(n1, n2);
+	}
+
+	/*
+	 * Declare e inicie 2 variables que permitan realizar y mostrar en consola las
+	 * operaciones básicas matemáticas (suma, resta, división y multiplicación) pero
+	 * con la opción de elegir cual operación realizar
+	 */
+	public static void operaciones2(double n1, double n2) {
+		System.out.println("Seleccione que desea hacer con los valores recibidos\n");
+		System.out.println("1- Sumar"+
+						   "2- Restar"+
+						   "3- Multiplicar"+
+						   "4- Dividir\n");
+		System.out.println("Recuerde que si divide por cero, el programa explota.");
+		int valor = teclado.nextInt();
+		
+		switch (key) {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+	
+
+}
