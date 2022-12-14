@@ -7,7 +7,7 @@ public class Clase1 {
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		login("Admin", "Admin1234");
+		notas();
 
 	}
 
@@ -118,40 +118,88 @@ public class Clase1 {
 			System.out.println("Intentá de vuelta");
 			user = teclado.nextInt();
 		}
-		
-		System.out.println("Felicitaciones! El número era " +valorAleatorio);
+
+		System.out.println("Felicitaciones! El número era " + valorAleatorio);
 	}
-	
+
 	/*
-	 * Realice un programa que un usuario ingrese al sistema
-	 * Si se equivoca 3 veces en su usuario o contraseña, será bloqueado.
+	 * Realice un programa que un usuario ingrese al sistema Si se equivoca 3 veces
+	 * en su usuario o contraseña, será bloqueado.
 	 */
 	public static void login(String user, String pass) {
 		int intentos = 2;
-		
+
 		System.out.println("Ingrese su usuario");
 		String userRecibido = teclado.next();
 
 		System.out.println("Ingrese su contraseña");
 		String passRecibido = teclado.next();
 
-		while (!(((user.equals(userRecibido) && (pass.equals(passRecibido)))) || intentos==0)){
+		while (!(((user.equals(userRecibido) && (pass.equals(passRecibido)))) || intentos == 0)) {
 			System.err.println("Usuario o contraseña inválidos");
 			intentos--;
-			System.err.println("Intente de nuevo, tiene " + (intentos+1) + " intentos");
+			System.err.println("Intente de nuevo, tiene " + (intentos + 1) + " intentos");
 			System.out.println("Ingrese su usuario");
 			userRecibido = teclado.next();
 
 			System.out.println("Ingrese su contraseña");
 			passRecibido = teclado.next();
 		}
-		
-		if(intentos==0) {
+
+		if (intentos == 0) {
 			System.err.println("Usuario bloqueado");
-		}else {
-			System.out.println("Bienvenido al sistema, " +user);
-			
+		} else {
+			System.out.println("Bienvenido al sistema, " + user);
+
 		}
+	}
+
+	/*
+	 * Realizar un programa que pida cantidad de notas, nota y nombre.
+	 * 
+	 * Debe mostrar promedio de notas y notas mayor y menor
+	 * 
+	 * Ordenar las notas con su nombre
+	 */
+
+	public static void notas() {
+		int cantidad, aux;
+		int[] notas, auxNotas; // arrays a usar en el ej
+		String nombre;
+		String[] nombres;
+
+		System.out.println("Ingrese cantidad de notas");
+		cantidad = teclado.nextInt();
+
+		notas = new int[cantidad]; // inicializo notas
+		nombres = new String[cantidad]; // inicializo nombres
+
+		for (int i = 0; i < cantidad; i++) {
+			System.out.println("Ingrese la nota");
+			notas[i] = teclado.nextInt();
+
+			System.out.println("Ingrese el nombre");
+			nombres[i] = teclado.next();
+		}
+
+		for (int i = 0; i < (cantidad); i++) { //ordenamiento
+			for (int j = 0; j < i; j++) {
+				if (notas[i] > notas[j]) {
+					aux = notas[j];
+					notas[j] = notas[i];
+					notas[i] = aux;
+					
+					nombre = nombres[j];
+					nombres[j] = nombres[i];
+					nombres[i] = nombre;
+				}
+			}
+		}
+
+		for (int i=0; i<cantidad; i++) {
+			System.out.println(nombres[i] + " - " +notas[i]);
+		}
+
 	}
 
 }
