@@ -7,7 +7,7 @@ public class Clase1 {
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		operaciones3(5, 5);
+		login("Admin", "Admin1234");
 
 	}
 
@@ -57,13 +57,16 @@ public class Clase1 {
 
 		if (valor == 1) {
 			System.out.println("La suma es " + (n1 + n2));
-		}if (valor == 2) {
+		}
+		if (valor == 2) {
 			System.out.println("La resta es " + (n1 - n2));
-		}if (valor == 3) {
+		}
+		if (valor == 3) {
 			System.out.println("La multiplicación es " + (n1 * n2));
-		}if (valor == 4) {
+		}
+		if (valor == 4) {
 			System.out.println("La division es " + (n1 / n2));
-		}else {
+		} else {
 			System.out.println("No ingresó un valor válido, el programa finalizará.");
 		}
 
@@ -98,6 +101,56 @@ public class Clase1 {
 		default:
 			System.out.println("No ingresó un valor válido, el programa finalizará.");
 			break;
+		}
+	}
+
+	/*
+	 * Realice un programa que genere un número aleatorio entre 1 y 10. El usuario
+	 * debe adivinarlo, sin límites de intento.
+	 */
+	public static void aleatorio() {
+		int valorAleatorio = (int) ((Math.random() * ((10 - 1) + 1)) + 1); // genera el n°
+		System.out.println("Tengo pensado un número del 1 al 10, adivine cual :D ");
+		int user = teclado.nextInt();
+
+		while (valorAleatorio != user) {
+			System.err.println("Nop, no es ese");
+			System.out.println("Intentá de vuelta");
+			user = teclado.nextInt();
+		}
+		
+		System.out.println("Felicitaciones! El número era " +valorAleatorio);
+	}
+	
+	/*
+	 * Realice un programa que un usuario ingrese al sistema
+	 * Si se equivoca 3 veces en su usuario o contraseña, será bloqueado.
+	 */
+	public static void login(String user, String pass) {
+		int intentos = 2;
+		
+		System.out.println("Ingrese su usuario");
+		String userRecibido = teclado.next();
+
+		System.out.println("Ingrese su contraseña");
+		String passRecibido = teclado.next();
+
+		while (!(((user.equals(userRecibido) && (pass.equals(passRecibido)))) || intentos==0)){
+			System.err.println("Usuario o contraseña inválidos");
+			intentos--;
+			System.err.println("Intente de nuevo, tiene " + (intentos+1) + " intentos");
+			System.out.println("Ingrese su usuario");
+			userRecibido = teclado.next();
+
+			System.out.println("Ingrese su contraseña");
+			passRecibido = teclado.next();
+		}
+		
+		if(intentos==0) {
+			System.err.println("Usuario bloqueado");
+		}else {
+			System.out.println("Bienvenido al sistema, " +user);
+			
 		}
 	}
 
