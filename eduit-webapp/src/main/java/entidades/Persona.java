@@ -19,26 +19,36 @@ public class Persona {
 	}
 
 	
-	public Persona(String nombre, String apellido, Documento documento) {
+	public Persona(String nombre, String apellido, Documento documento, int edad) {
 		contador++;
 		this.id = contador;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.documento = documento;
-		this.edad = (int) ((Math.random() * ((120 - 1) + 1)) + 1);
+		this.edad = edad;
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Legajo N° " + id + "\nNombre: " + nombre + "\nApellido: " + apellido +
+				"\n" + documento.toString()
+				+ "\nEdad: " + edad ;
+	}
+
+
 	public boolean mayor(int n) {
-		if(n>=18) {
-			return true;
-		}else {
-			return false;
-		}
+		return n>=18;
 	}
 
 	
 	//Gets n Sets
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -72,10 +82,7 @@ public class Persona {
 	}
 
 
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	
 }

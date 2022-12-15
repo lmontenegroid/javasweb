@@ -1,0 +1,7 @@
+package entidades;
+
+public class Alumno extends Persona {
+	
+	private String[] listaCursos;
+	
+}

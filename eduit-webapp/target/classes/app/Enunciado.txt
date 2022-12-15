@@ -1,12 +1,18 @@
 
 
-Se requiere se haga un sistema que agregue personas a una lista y se le pidan los siguientes datos:
+1. Se requiere se haga un sistema que agregue alumnos con lo atributos heredados de persona a una lista y se le pidan los
+siguientes datos:
 
-1. Id (numérico entero único)
-2. Nombre
-3. Apellido
-4. Tipo de Documento y Numero de Documento (crear un clase para este tipo de dato)
-5. Edad.
-6. Deberá crear 2 constructores. (constructor por defecto, constructor sin edad y que le agine la edad automáticamente)
-7. Se requiere que el sistema le asigne a través de una variable de clase un id auto incrementable.
-8. Se debe mostrar cuantas personas se asignaron.
+2. Id (numérico entero único)
+3. Nombre
+4. Apellido
+5. Tipo de Documento y Numero de Documento (crear un clase para este tipo de dato) no debe poder heredarse.
+6. Edad.
+7. La clase alumno tendrá un atributo donde se le asignara una lista de cursos.
+8. Deberá crear 1 solo constructor con todos los datos.
+9. Se requiere que el sistema le asigne a través de una variable de clase un id auto incrementable.
+10. Se utilizara para el ejercicio el método toString de la clase Persona y será redefinido en la clase hija..
+11. Se debe mostrar cuantas personas se asignaron.
+
+
+* Todos los datos deben ser objetos

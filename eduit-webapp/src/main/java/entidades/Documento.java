@@ -1,6 +1,6 @@
 package entidades;
 
-public class Documento {
+public final class Documento {
 	
 	//Atributos
 	String tipo;
@@ -11,7 +11,17 @@ public class Documento {
 		this.tipo = tipo;
 		this.numero = numero;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Tipo de documento: " + tipo + "\nNumero de documento: " + numero;
+	}
 
+
+	
+	//Gets n Sets
+	
 	public String getTipo() {
 		return tipo;
 	}

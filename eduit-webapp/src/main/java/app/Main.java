@@ -1,30 +1,33 @@
 package app;
 
+
 import java.util.Scanner;
 
+import entidades.Alumno;
 import entidades.Documento;
-import entidades.Persona;
+
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		int cantidadPersonas;
+		int cantidadAlumnos, cantidadCursos, edad;
 		
 		String nombre, apellido, tipoDoc, numDoc;
-		Persona persona;
-		Persona[] personas;
+		String[] cursos;
+		Alumno alumno;
+		Alumno[] alumnos;
 		
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println("Ingresando personas al sistema");
+		System.out.println("Ingresando alumnos al sistema");
 		
-		System.out.println("Cuántas personas desea ingresar?");
-		cantidadPersonas = teclado.nextInt();
+		System.out.println("Cuántos alumnos desea ingresar?");
+		cantidadAlumnos = teclado.nextInt();
 		
-		personas = new Persona[cantidadPersonas];
+		alumnos = new Alumno[cantidadAlumnos];
 		
-		for(int i=0; i<cantidadPersonas; i++) {
+		for(int i=0; i<cantidadAlumnos; i++) {
 			System.out.println("Ingrese nombre");
 			nombre = teclado.next();
 			
@@ -37,22 +40,31 @@ public class Main {
 			System.out.println("Ingrese el numero de documento");
 			numDoc = teclado.next();
 			
-			persona = new Persona(nombre, apellido, new Documento(tipoDoc, numDoc));
+			System.out.println("Ingrese la edad");
+			edad = teclado.nextInt();
 			
-			personas[i] = persona;
+			System.out.println("Ingrese la cantidad de cursos del alumno");
+			cantidadCursos = teclado.nextInt();
+			
+			cursos = new String[cantidadCursos];
+			
+			for (int j = 0; j < cantidadCursos; j++) {
+				System.out.println("Ingrese nombre de curso");
+				cursos[j] = teclado.next();
+			}
+			
+			alumno = new Alumno(nombre, apellido, new Documento(tipoDoc, numDoc), edad, cursos);
+			
+			alumnos[i] = alumno;
 		}
 		
 		
-		for (Persona personita : personas) {
-			System.out.println("Persona N° " +personita.getId());
-			System.out.println("Nombre -> " + personita.getNombre());
-			System.out.println("Apellido -> " +personita.getApellido());
-			System.out.println("Tipo de documento ->" +personita.getDocumento().getTipo());
-			System.out.println("Numero de documento ->" +personita.getDocumento().getNumero());
-			System.out.println("Edad -> " +personita.getEdad());
-			
+		for (Alumno alumnito : alumnos) {
+			System.out.println(alumnito.toString());
 		}
-		System.out.println("Se ingresaron " +cantidadPersonas+ " cantidad de personas.");
+		
+		
+		System.out.println("Se ingresaron " +cantidadAlumnos+ " alumnos.");
 		
 		teclado.close();
 		

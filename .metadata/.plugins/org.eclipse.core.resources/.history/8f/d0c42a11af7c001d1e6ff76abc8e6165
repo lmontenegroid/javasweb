@@ -1,0 +1,62 @@
+package app;
+
+import java.util.Scanner;
+
+import entidades.Alumno;
+import entidades.Documento;
+import entidades.Persona;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int cantidadAlumnos;
+		
+		String nombre, apellido, tipoDoc, numDoc;
+		Alumno alumno;
+		Alumno[] alumnos;
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Ingresando alumnos al sistema");
+		
+		System.out.println("Cuántos alumnos desea ingresar?");
+		cantidadAlumnos = teclado.nextInt();
+		
+		alumnos = new Alumno[cantidadAlumnos];
+		
+		for(int i=0; i<cantidadAlumnos; i++) {
+			System.out.println("Ingrese nombre");
+			nombre = teclado.next();
+			
+			System.out.println("Ingrese apellido");
+			apellido = teclado.next();
+			
+			System.out.println("Ingrese el tipo de documento");
+			tipoDoc = teclado.next();
+			
+			System.out.println("Ingrese el numero de documento");
+			numDoc = teclado.next();
+			
+			alumno = new Alumno(nombre, apellido, new Documento(tipoDoc, numDoc));
+			
+			alumnos[i] = alumno;
+		}
+		
+		
+		for (Alumno alumnito : alumnos) {
+			System.out.println("Persona N° " +alumnito.getId());
+			System.out.println("Nombre -> " + alumnito.getNombre());
+			System.out.println("Apellido -> " +alumnito.getApellido());
+			System.out.println("Tipo de documento ->" +alumnito.getDocumento().getTipo());
+			System.out.println("Numero de documento ->" +alumnito.getDocumento().getNumero());
+			System.out.println("Edad -> " +alumnito.getEdad());
+			
+		}
+		System.out.println("Se ingresaron " +cantidadPersonas+ " cantidad de personas.");
+		
+		teclado.close();
+		
+	}
+
+}
