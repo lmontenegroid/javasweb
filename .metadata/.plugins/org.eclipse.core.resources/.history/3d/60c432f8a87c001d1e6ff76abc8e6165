@@ -3,10 +3,10 @@ package entidades;
 public class Persona {
 
 	// Atributos
-	private String nombre;
-	private String apellido;
-	private Documento documento;
-	private int edad;
+	String nombre;
+	String apellido;
+	Documento documento;
+	int edad;
 
 	// Constructores
 	public Persona() {
@@ -18,13 +18,6 @@ public class Persona {
 		this.apellido = apellido;
 		this.documento = documento;
 		this.edad = edad;
-	}
-	
-	public Persona(String nombre, String apellido, Documento documento) {
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.documento = documento;
-		this.edad = (int) ((Math.random() * ((120 - 1) + 1)) + 1);
 	}
 	
 	

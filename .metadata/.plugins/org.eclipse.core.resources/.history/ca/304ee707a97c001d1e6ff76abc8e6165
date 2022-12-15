@@ -20,11 +20,11 @@ public class Persona {
 		this.edad = edad;
 	}
 	
-	public Persona(String nombre, String apellido, Documento documento) {
+	public Persona(String nombre, String apellido, Documento documento, int edad) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.documento = documento;
-		this.edad = (int) ((Math.random() * ((120 - 1) + 1)) + 1);
+		this.edad = edad;
 	}
 	
 	

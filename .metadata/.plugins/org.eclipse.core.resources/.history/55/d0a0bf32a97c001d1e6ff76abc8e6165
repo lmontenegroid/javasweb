@@ -24,7 +24,7 @@ public class Persona {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.documento = documento;
-		this.edad = (int) ((Math.random() * ((120 - 1) + 1)) + 1);
+		this.edad = int valorAleatorio = (int) ((Math.random() * ((10 - 1) + 1)) + 1); // genera el n°;
 	}
 	
 	
