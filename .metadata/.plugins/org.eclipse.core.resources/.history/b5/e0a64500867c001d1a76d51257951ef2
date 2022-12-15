@@ -1,0 +1,19 @@
+package app;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int cantidadPersonas;
+		Scanner
+		
+		System.out.println("Ingresando personas al sistema");
+		
+		System.out.println("Cuántas personas desea ingresar?");
+		
+		
+	}
+
+}

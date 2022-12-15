@@ -1,0 +1,8 @@
+package entidades;
+
+public class Documento {
+	
+	//Atributos
+	String tipo;
+	String numero;
+}

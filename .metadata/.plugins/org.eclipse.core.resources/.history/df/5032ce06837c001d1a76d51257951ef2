@@ -1,0 +1,10 @@
+package entidades;
+
+public class Persona {
+
+	//Atributos
+	String nombre;
+	String apellido;
+	Documento documento;
+	int edad;
+}

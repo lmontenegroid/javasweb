@@ -1,0 +1,17 @@
+package test;
+
+import junit.framework.TestCase;
+
+public class Test extends TestCase {
+
+	private Persona persona;
+
+	public void escenario() {
+		persona = new Persona(); // Inicializo el objeto a testear
+	}
+
+	public void testOperaciones() {
+		escenario(); // Doy espacio dentro del método
+		assertTrue(ejercicio.promedio(9, 8, 7, 6) == 7.5); // pruebo
+	}
+}
