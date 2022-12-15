@@ -9,4 +9,5 @@ Se requiere se haga un sistema que agregue personas a una lista y se le pidan lo
 5. Edad.
 6. Deberá crear 2 constructores. (constructor por defecto, constructor sin edad y que le agine la edad automáticamente)
 7. Se requiere que el sistema le asigne a través de una variable de clase un id auto incrementable.
-8. Se debe mostrar cuantas personas se asignaron.
+
+9. Se debe mostrar cuantas personas se asignaron.

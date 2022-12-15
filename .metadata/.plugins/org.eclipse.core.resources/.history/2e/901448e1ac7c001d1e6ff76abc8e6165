@@ -71,11 +71,5 @@ public class Persona {
 		this.edad = edad;
 	}
 
-
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
 }

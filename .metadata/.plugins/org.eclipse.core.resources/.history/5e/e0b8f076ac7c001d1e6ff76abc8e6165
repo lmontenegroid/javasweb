@@ -37,6 +37,8 @@ public class Main {
 			System.out.println("Ingrese el numero de documento");
 			numDoc = teclado.next();
 			
+
+			
 			persona = new Persona(nombre, apellido, new Documento(tipoDoc, numDoc));
 			
 			personas[i] = persona;
@@ -44,16 +46,18 @@ public class Main {
 		
 		
 		for (Persona personita : personas) {
-			System.out.println("Persona N° " +personita.getId());
 			System.out.println("Nombre -> " + personita.getNombre());
 			System.out.println("Apellido -> " +personita.getApellido());
 			System.out.println("Tipo de documento ->" +personita.getDocumento().getTipo());
 			System.out.println("Numero de documento ->" +personita.getDocumento().getNumero());
 			System.out.println("Edad -> " +personita.getEdad());
+			if(personita.mayor(personita.getEdad())) {
+				System.out.println("Es mayor de edad");
+			}else {
+				System.out.println("Es menor de edad");
+			}
 			
 		}
-		System.out.println("Se ingresaron " +cantidadPersonas+ " cantidad de personas.");
-		
 		teclado.close();
 		
 	}

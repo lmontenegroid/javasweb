@@ -1,15 +1,12 @@
 
 
-Se requiere se haga un sistema que agregue personas a una lista y se le pidan los
-siguientes datos:
+Se requiere se haga un sistema que agregue personas a una lista y se le pidan los siguientes datos:
 
-1. Nombre
-2. Apellido
-3. Tipo de Documento y Numero de Documento (crear un clase para este tipo de dato)
-4. La edad.
-5. Deberá crear 3 constructores. (constructor por defecto, constructor sin edad y 
-   que le agine la edad automáticamente y un constructor con todos los datos)
-6. Al finalizar de pedir los datos debe mostrar por consola todos los datos 
-   introducidos e indicar si la persona es mayor o menor de edad.
-7. Se utilizara para el ejercicio los métodos setter para asignar valores y getter
-   para mostrar. Recuerde que los datos todos deben ser privados
+1. Id (numérico entero único)
+2. Nombre
+3. Apellido
+4. Tipo de Documento y Numero de Documento (crear un clase para este tipo de dato)
+5. Edad.
+6. Deberá crear 2 constructores. (constructor por defecto, constructor sin edad y que le agine la edad automáticamente)
+7. Se requiere que el sistema le asigne a través de una variable de clase un id auto incrementable.
+8. Se debe mostrar cuantas personas se asignaron.

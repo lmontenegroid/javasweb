@@ -44,7 +44,6 @@ public class Main {
 		
 		
 		for (Persona personita : personas) {
-			System.out.println("Persona N° " +personita.getId());
 			System.out.println("Nombre -> " + personita.getNombre());
 			System.out.println("Apellido -> " +personita.getApellido());
 			System.out.println("Tipo de documento ->" +personita.getDocumento().getTipo());
@@ -52,7 +51,7 @@ public class Main {
 			System.out.println("Edad -> " +personita.getEdad());
 			
 		}
-		System.out.println("Se ingresaron " +cantidadPersonas+ " cantidad de personas.");
+		System.out.println("Se ingresaron " +cantidadPersonas);
 		
 		teclado.close();
 		
