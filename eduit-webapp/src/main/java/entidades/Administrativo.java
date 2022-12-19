@@ -32,4 +32,28 @@ public class Administrativo extends Persona {
 		
 	}
 
+	@Override
+	public void guardar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modificar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String identificar() {
+		// TODO Auto-generated method stub
+		return "Administrativo";
+	}
+
 }

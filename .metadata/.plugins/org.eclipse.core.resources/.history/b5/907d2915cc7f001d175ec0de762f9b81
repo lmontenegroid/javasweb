@@ -1,0 +1,14 @@
+
+
+Se requiere que haga un sistema con:
+
+DIRECTOR - PROFESOR - ADMINISTRATIVO - ALUMNO
+
+Director -> nombre, apellido, tipo y numero de doc, fecha de nacimiento e ingreso, carrera y sueldo
+Profesor -> nombre, apellido, tipo y numero de doc, fecha de nacimiento e ingreso, sueldo y cursos
+Admin -> nombre, apellido, tipo y numero de doc, fecha de nacimiento e ingreso y sueldo
+Alumno -> nombre, apellido, tipo y numero de doc, fecha de nacimiento e ingreso, cursos
+
+- Mostrar todos los atributos a traves del método toString
+- Debe existir un método en todas las clases que diga el rol más su nombre y apellido
+- Para este ej se deben poder agregar todos los roles.
