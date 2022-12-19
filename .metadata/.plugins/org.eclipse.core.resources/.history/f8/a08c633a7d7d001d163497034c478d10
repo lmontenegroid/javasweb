@@ -1,0 +1,36 @@
+package entidades;
+
+import java.util.Date;
+
+public class Director extends Persona {
+
+	// Atributos
+	private String carrera;
+	private double sueldo;
+
+	public Director(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso,
+			double sueldo) {
+		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
+		this.sueldo = sueldo;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "\nSueldo: " + sueldo + "\n";
+	}
+
+	public double getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(double sueldo) {
+		this.sueldo = sueldo;
+	}
+
+	@Override
+	public void rol() {
+		System.out.println(getNombre()+ " " +getApellido() + " - Administrativo");
+		
+	}
+
+}

@@ -1,16 +1,19 @@
 package entidades;
 
-public class Persona {
+import java.util.Date;
+
+public abstract class Persona {
 
 	// variable de clase
 	public static int contador = 0;
-	
+
 	// Atributos
 	private int id;
 	private String nombre;
 	private String apellido;
 	private Documento documento;
-	private int edad;
+	private Date fechaNacimiento;
+	private Date fechaIngreso;
 
 	// Constructores
 	public Persona() {
@@ -18,37 +21,34 @@ public class Persona {
 		this.id = contador;
 	}
 
-	
-	public Persona(String nombre, String apellido, Documento documento, int edad) {
+	public Persona(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso) {
 		contador++;
 		this.id = contador;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.documento = documento;
-		this.edad = edad;
+		this.fechaNacimiento = fechaNacimiento;
+		this.fechaIngreso = fechaIngreso;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Legajo N° " + id + "\nNombre: " + nombre + "\nApellido: " + apellido +
-				"\n" + documento.toString()
-				+ "\nEdad: " + edad ;
+		return "Legajo N° " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\n" + documento.toString()
+				+ "\nFecha de nacimiento: " + fechaNacimiento + "\nFecha de ingreso: " +fechaIngreso;
 	}
-
 
 	public boolean mayor(int n) {
-		return n>=18;
+		return n >= 18;
 	}
-
 	
-	//Gets n Sets
+	public abstract void rol();
+
+	// Gets n Sets
 	public String getId() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -73,16 +73,20 @@ public class Persona {
 		this.documento = documento;
 	}
 
-	public int getEdad() {
-		return edad;
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
 	}
 
-	public void setEdad(int edad) {
-		this.edad = edad;
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
+	public Date getFechaIngreso() {
+		return fechaIngreso;
+	}
 
-	
+	public void setFechaIngreso(Date fechaIngreso) {
+		this.fechaIngreso = fechaIngreso;
+	}
 
-	
 }
