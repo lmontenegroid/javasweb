@@ -9,7 +9,6 @@ import entidades.Director;
 import entidades.Documento;
 import entidades.Persona;
 import entidades.Profesor;
-import excepciones.ExcepcionDocumento;
 import excepciones.FechaException;
 import interfaces.Constantes;
 
@@ -25,7 +24,7 @@ public class Main {
 		String[] cursos;
 		Persona persona;
 		Persona[] personas;
-		String nombre, apellido, tipoDoc, numDoc, carrera;
+		String nombre, apellido, tipoDoc, numDoc, carrera, tipo;
 		Date fechaNac, fechaIng;
 		double sueldo;
 		byte rol;
@@ -46,12 +45,12 @@ public class Main {
 			apellido = teclado.next();
 
 			while (true) {
-				System.out.println("Ingrese el tipo de Documento");
-				tipoDoc = teclado.next();
+				System.out.print("Ingrese el tipo de Documento");
+				tipo = teclado.next();
 				try {
 					boolean documentoCorrecto = false;
 					for (int j = 0; j < Constantes.tipoDocumento.length; j++) {
-						if (tipoDoc.equalsIgnoreCase(Constantes.tipoDocumento[j])) {
+						if (tipo.equalsIgnoreCase(Constantes.tipoDocumento[j])) {
 							documentoCorrecto = true;
 							break;
 						}

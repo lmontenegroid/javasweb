@@ -46,7 +46,7 @@ public class Main {
 			apellido = teclado.next();
 
 			while (true) {
-				System.out.println("Ingrese el tipo de Documento");
+				System.out.print("Ingrese el tipo de Documento");
 				tipoDoc = teclado.next();
 				try {
 					boolean documentoCorrecto = false;
