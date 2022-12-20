@@ -1,0 +1,11 @@
+package excepciones;
+
+import java.util.Date;
+
+public class FechaException extends Exception{
+
+	
+	public Date validaFecha() {
+		
+	}
+}

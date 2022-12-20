@@ -5,5 +5,8 @@
     <fullyQualifiedTypeName name="entidades.Alumno"/>
     <fullyQualifiedTypeName name="entidades.Profesor"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="interfaces.Acciones"/>
     <fullyQualifiedTypeName name="entidades.Persona"/>
+    <fullyQualifiedTypeName name="entidades.Administrativo"/>
+    <fullyQualifiedTypeName name="entidades.Director"/>
 </qualifiedTypeNameHistroy>

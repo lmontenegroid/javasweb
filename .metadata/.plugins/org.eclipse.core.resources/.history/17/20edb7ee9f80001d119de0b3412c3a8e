@@ -1,0 +1,47 @@
+package excepciones;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class FechaException extends Exception {
+
+	public static Scanner teclado = new Scanner(System.in);
+
+	public static Date validarFecha() {
+
+		int dia = 0, mes = 0, anio = 0;
+
+		while (anio == 0) {
+			try {
+				System.out.println("Ingrese el año");
+				anio = 0;
+			} catch (Exception e) {
+				System.err.println("Dato incorrecto");
+				teclado.hasNextInt();
+			}
+
+			anio = 0;
+		}
+
+		return null;
+	}
+	
+
+	public static void validaInt(int dato) {
+
+		while (dato == 0) {
+
+			System.out.print("Please input a valid binary: ");
+
+			if (teclado.hasNextInt(radixe)) {
+				binary = teclado.nextInt(radixe);
+			} else {
+				System.out.println("Not a Valid Binary");
+			}
+			teclado.nextLine();
+		}
+
+		System.out.print("Converted Binary: " + binary);
+	}
+
+}

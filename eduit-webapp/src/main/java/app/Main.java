@@ -9,6 +9,7 @@ import entidades.Director;
 import entidades.Documento;
 import entidades.Persona;
 import entidades.Profesor;
+import excepciones.FechaException;
 
 public class Main {
 
@@ -16,13 +17,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		/*
-		 * Alumno a = new Alumno("Juan", "Sanchez", new Documento("dni", "39147106"),
-		 * new Date(07,05,1996), new Date(07,05,1996), new String[] {"html", "jsweb"});
-		 * Alumno a2 = new Alumno("Juanes", "Sanchezes", new Documento("dni",
-		 * "39147107"), new Date(07,05,1997), new Date(07,05,1997), new String[]
-		 * {"htmls", "jswebs"});
-		 */
+		
 		int cantidad, cantidadCursos;
 
 		String[] cursos;
@@ -55,27 +50,13 @@ public class Main {
 			System.out.println("Ingrese el numero de documento");
 			numDoc = teclado.next();
 
-			System.out.println("Ingrese dia de nacimiento");
-			dia = teclado.nextInt();
+			System.out.println("Nacimiento:");
+			
+			fechaNac = FechaException.validarFecha();
 
-			System.out.println("Ingrese mes de nacimiento");
-			mes = teclado.nextInt();
+			System.out.println("Ingreso");
 
-			System.out.println("Ingrese anio de nacimiento");
-			anio = teclado.nextInt();
-
-			fechaNac = new Date(anio - 1900, mes - 1, dia);
-
-			System.out.println("Ingrese dia de ingreso");
-			dia = teclado.nextInt();
-
-			System.out.println("Ingrese mes de ingreso");
-			mes = teclado.nextInt();
-
-			System.out.println("Ingrese anio de ingreso");
-			anio = teclado.nextInt();
-
-			fechaIng = new Date(anio - 1900, mes - 1, dia);
+			fechaIng = FechaException.validarFecha();
 
 			System.out.println("Ingrese el número del rol a ingresar\n" + "1- Director\n" + "2- Profesor\n"
 					+ "3- Administrativo\n" + "4- Alumno\n");

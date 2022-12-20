@@ -1,0 +1,30 @@
+package excepciones;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class FechaException extends Exception {
+
+	public static Scanner teclado = new Scanner(System.in);
+
+	public static Date validarFecha() {
+
+		byte dia = 0, mes = 0, anio = 0;
+
+		try {
+			while (anio == 0) {
+				try {
+					System.out.println("Ingrese el año");
+					anio = teclado.nextByte();
+				} catch (Exception e) {
+					System.err.println("Dato incorrecto");
+					anio = 0;
+				}
+			}
+		} catch (Exception e) {
+
+		}
+		return null;
+	}
+
+}

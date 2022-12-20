@@ -1,0 +1,17 @@
+package excepciones;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class FechaException extends Exception{
+
+	public static Scanner teclado = new Scanner(System.in);
+	
+	
+	public Date validaFecha() {
+		
+		
+		
+		return null;
+	}
+}
