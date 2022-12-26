@@ -1,0 +1,9 @@
+package enums;
+
+public enum TiposDocumentos {
+	DNI("Documento Nacional de Identidad"),
+	PAS("Pasaporte Argentino"),
+	LE("Libreta de Enrolamiento"),
+	CI("Libreta Cívica")
+	;
+}

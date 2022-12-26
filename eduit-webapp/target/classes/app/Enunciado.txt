@@ -1,6 +1,6 @@
 
 
-A todo lo anterior del laboratorio 1 - 5, se le suma:
+A todo lo anterior del laboratorio 5, se le suma:
 
-• Debe crear una excepción propia donde indique que son solo 
-  válidos los documentos: DNI, PAS, LE, CI.
+• No debe permitir agregar Elementos duplicados (Personas con Documentos iguales).
+• Debe mostrar la lista ordenada por Tipo y numero de Documento.

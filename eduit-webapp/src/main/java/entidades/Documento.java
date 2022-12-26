@@ -1,13 +1,15 @@
 package entidades;
 
+import enums.TiposDocumentos;
+
 public final class Documento {
 	
 	//Atributos
-	String tipo;
+	TiposDocumentos tipo;
 	String numero;
 	
 	//Constructores
-	public Documento(String tipo, String numero) {
+	public Documento(TiposDocumentos tipo, String numero) {
 		this.tipo = tipo;
 		this.numero = numero;
 	}
@@ -22,11 +24,11 @@ public final class Documento {
 	
 	//Gets n Sets
 	
-	public String getTipo() {
+	public TiposDocumentos getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
+	public void setTipo(TiposDocumentos tipo) {
 		this.tipo = tipo;
 	}
 

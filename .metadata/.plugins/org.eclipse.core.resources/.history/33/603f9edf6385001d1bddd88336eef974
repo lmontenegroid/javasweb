@@ -1,0 +1,17 @@
+package excepciones;
+
+
+
+import enums.TiposDocumentos;
+
+public class ExcepcionDocumento extends Exception{
+
+	private static final long serialVersionUID = 1L;
+
+
+	public static String getMessage(int codigo) {
+
+			return "Los Documentos validos son: " + TiposDocumentos.values().toString();
+		
+	}
+}

@@ -1,0 +1,19 @@
+package enums;
+
+public enum TiposDocumentos {
+	DNI("Documento Nacional de Identidad"),
+	PAS("Pasaporte Argentino"),
+	LE("Libreta de Enrolamiento"),
+	CI("Libreta Cívica")
+	;
+
+	private String descripcion;
+
+	private TiposDocumento(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+}
