@@ -1,8 +1,10 @@
 package app;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
+import comparadores.OrdenDocumento;
 import entidades.Administrativo;
 import entidades.Alumno;
 import entidades.Director;
@@ -29,15 +31,18 @@ public class Main {
 		Date fechaNac, fechaIng;
 		double sueldo;
 		byte rol;
+		Documento documento;
 
 		System.out.println("Ingresando personas al sistema");
 
 		System.out.println("Cuántas personas desea ingresar?");
-cantidad = teclado.nextInt();
+		cantidad = teclado.nextInt();
 
 		personas = new Persona[cantidad];
 
 		for (int i = 0; i < cantidad; i++) {
+
+			System.out.println("\nImprimiendo persona N° " + (i + 1) + "\n");
 
 			System.out.println("Ingrese nombre");
 			nombre = teclado.next();
@@ -59,6 +64,27 @@ cantidad = teclado.nextInt();
 			System.out.println("Ingrese el numero de documento");
 			numDoc = teclado.next();
 
+			documento = new Documento(tipoDoc, numDoc);
+
+			while (true) {
+				try {
+					for (Persona persona2 : personas) {
+						if (persona2 == null) {
+							break;
+						}
+						while(persona2.equals(documento)) {
+							System.err.println("El documento ya fue ingresado");
+							System.out.println("Ingrese el numero de documento");
+							numDoc = teclado.next();
+							documento.setNumero(numDoc);
+						}
+					}
+				} catch (Exception e) {
+					System.err.println("Hubo un error");
+				}
+				break;
+			}
+
 			System.out.println("Nacimiento:");
 
 			fechaNac = FechaException.validarFecha();
@@ -78,8 +104,7 @@ cantidad = teclado.nextInt();
 				carrera = teclado.next();
 				System.out.println("Ingrese el sueldo del director");
 				sueldo = teclado.nextDouble();
-				persona = new Director(nombre, apellido, new Documento(tipoDoc, numDoc), fechaNac, fechaIng, carrera,
-						sueldo);
+				persona = new Director(nombre, apellido, documento, fechaNac, fechaIng, carrera, sueldo);
 
 				personas[i] = persona;
 				break;
@@ -97,8 +122,7 @@ cantidad = teclado.nextInt();
 					cursos[j] = teclado.next();
 				}
 
-				persona = new Profesor(nombre, apellido, new Documento(tipoDoc, numDoc), fechaNac, fechaIng, sueldo,
-						cursos);
+				persona = new Profesor(nombre, apellido, documento, fechaNac, fechaIng, sueldo, cursos);
 
 				personas[i] = persona;
 
@@ -107,8 +131,7 @@ cantidad = teclado.nextInt();
 				System.out.println("Ingrese el sueldo del administrativo");
 				sueldo = teclado.nextDouble();
 
-				persona = new Administrativo(nombre, apellido, new Documento(tipoDoc, numDoc), fechaNac, fechaIng,
-						sueldo);
+				persona = new Administrativo(nombre, apellido, documento, fechaNac, fechaIng, sueldo);
 
 				personas[i] = persona;
 
@@ -124,7 +147,7 @@ cantidad = teclado.nextInt();
 					cursos[j] = teclado.next();
 				}
 
-				persona = new Alumno(nombre, apellido, new Documento(tipoDoc, numDoc), fechaNac, fechaIng, cursos);
+				persona = new Alumno(nombre, apellido, documento, fechaNac, fechaIng, cursos);
 
 				personas[i] = persona;
 				break;
@@ -136,9 +159,20 @@ cantidad = teclado.nextInt();
 
 		}
 
+		System.out.println("\nImprimiendo lista sin ordenar\n");
 		for (Persona p : personas) {
 			System.out.println(p.toString());
 		}
+
+		OrdenDocumento orden = new OrdenDocumento();
+
+		Arrays.sort(personas, orden);
+
+		System.out.println("\nImprimiendo lista ordenada\n");
+		for (Persona p : personas) {
+			System.out.println(p.toString());
+		}
+
 	}
 
 }

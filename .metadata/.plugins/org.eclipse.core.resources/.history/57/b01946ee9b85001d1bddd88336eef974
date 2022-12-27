@@ -1,0 +1,23 @@
+
+import entidades.Persona;
+import junit.framework.TestCase;
+
+public class Testing extends TestCase{
+
+	private Persona ejercicio; //Declaro lo que voy a testear
+	
+	public void escenario() {
+		ejercicio = new Persona(); //Inicializo el objeto a testear
+	}
+	
+	public void testOperaciones() {
+		escenario(); //Doy espacio dentro del método
+		Documento doc = new Documento("DNI", "39147104");
+		assertTrue(ejercicio.equals(doc); //pruebo
+	}
+	
+	public void testMayor() {
+		escenario(); //Doy espacio dentro del método
+		assertTrue(ejercicio.mayor(9, 8) == 9); //pruebo
+	}
+}

@@ -38,6 +38,25 @@ public abstract class Persona implements Acciones{
 		return "Legajo N° " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\n" + documento.toString()
 				+ "\nFecha de nacimiento: " + fechaNacimiento + "\nFecha de ingreso: " +fechaIngreso;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		Documento doc = (Documento) obj;
+		
+		if(this.documento.tipo.toString().equals(doc.getTipo().toString())) {
+			if(this.documento.numero.toString().equals(doc.getNumero().toString())) {
+				return true;
+			}
+		}else {
+			return false;
+			
+		}
+		
+		return false; 
+		
+		
+	}
 
 	public boolean mayor(int n) {
 		return n >= 18;
