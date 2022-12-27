@@ -8,7 +8,7 @@ public class Profesor extends Persona {
 	private double sueldo;
 	private String[] listaCursos;
 
-	public Profesor(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso,
+	public Profesor(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso,
 			double sueldo, String[] listaCursos) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.sueldo = sueldo;

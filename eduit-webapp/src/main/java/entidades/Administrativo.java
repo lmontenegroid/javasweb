@@ -7,7 +7,7 @@ public class Administrativo extends Persona {
 	// Atributos
 	private double sueldo;
 
-	public Administrativo(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso,
+	public Administrativo(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso,
 			double sueldo) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.sueldo = sueldo;

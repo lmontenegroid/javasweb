@@ -8,7 +8,7 @@ public class Director extends Persona {
 	private String carrera;
 	private double sueldo;
 
-	public Director(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso,
+	public Director(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso,
 			String carrera, double sueldo) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.setCarrera(carrera);

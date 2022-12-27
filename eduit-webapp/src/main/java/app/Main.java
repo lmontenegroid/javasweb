@@ -1,10 +1,10 @@
 package app;
 
-import java.util.Arrays;
-import java.util.Date;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Scanner;
 
-import comparadores.OrdenDocumento;
+import comparadores.OrdenEdad;
 import entidades.Administrativo;
 import entidades.Alumno;
 import entidades.Director;
@@ -25,10 +25,11 @@ public class Main {
 
 		String[] cursos;
 		Persona persona;
-		Persona[] personas;
+		Queue<Persona> personas;
 		String nombre, apellido, numDoc, carrera;
 		TiposDocumentos tipoDoc;
-		Date fechaNac, fechaIng;
+		String fechaNac;
+		String fechaIng;
 		double sueldo;
 		byte rol;
 		Documento documento;
@@ -38,7 +39,8 @@ public class Main {
 		System.out.println("Cuántas personas desea ingresar?");
 		cantidad = teclado.nextInt();
 
-		personas = new Persona[cantidad];
+		OrdenEdad orden = new OrdenEdad();
+		personas = new PriorityQueue<>(orden);
 
 		for (int i = 0; i < cantidad; i++) {
 
@@ -72,7 +74,7 @@ public class Main {
 						if (persona2 == null) {
 							break;
 						}
-						while(persona2.equals(documento)) {
+						while (persona2.equals(documento)) {
 							System.err.println("El documento ya fue ingresado");
 							System.out.println("Ingrese el numero de documento");
 							numDoc = teclado.next();
@@ -106,7 +108,7 @@ public class Main {
 				sueldo = teclado.nextDouble();
 				persona = new Director(nombre, apellido, documento, fechaNac, fechaIng, carrera, sueldo);
 
-				personas[i] = persona;
+				personas.add(persona);
 				break;
 			case 2:
 				System.out.println("Ingrese el sueldo del profesor");
@@ -124,7 +126,7 @@ public class Main {
 
 				persona = new Profesor(nombre, apellido, documento, fechaNac, fechaIng, sueldo, cursos);
 
-				personas[i] = persona;
+				personas.add(persona);
 
 				break;
 			case 3:
@@ -133,8 +135,7 @@ public class Main {
 
 				persona = new Administrativo(nombre, apellido, documento, fechaNac, fechaIng, sueldo);
 
-				personas[i] = persona;
-
+				personas.add(persona);
 				break;
 			case 4:
 				System.out.println("Ingrese la cantidad de cursos del alumno");
@@ -149,7 +150,7 @@ public class Main {
 
 				persona = new Alumno(nombre, apellido, documento, fechaNac, fechaIng, cursos);
 
-				personas[i] = persona;
+				personas.add(persona);
 				break;
 
 			default:
@@ -159,19 +160,13 @@ public class Main {
 
 		}
 
-		System.out.println("\nImprimiendo lista sin ordenar\n");
-		for (Persona p : personas) {
-			System.out.println(p.toString());
+		System.out.println("\nAtendiendo a las personas\n");
+		while(personas.size()>1) {
+			System.out.println("Atendiendo a " + personas.poll().toString());
+			System.out.println("Por atender a " + personas.element().getNombre());
 		}
-
-		OrdenDocumento orden = new OrdenDocumento();
-
-		Arrays.sort(personas, orden);
-
-		System.out.println("\nImprimiendo lista ordenada\n");
-		for (Persona p : personas) {
-			System.out.println(p.toString());
-		}
+		System.out.println("Atendiendo a " + personas.poll().toString());
+		System.out.println("No queda nadie por atender. Saludos!");
 
 	}
 

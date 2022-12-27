@@ -1,0 +1,11 @@
+
+
+A todo lo anterior del laboratorio 6, se le suma:
+
+• Mejorar el método que recibe fecha para que reciba un String 
+  con el formato dd/mm/aaaa ej: 15/03/1983.
+  
+• Se nos pide que después de ingresado todos las personas sean 
+  atendidas para tomar la asistencia del instituto por orden de 
+  edad de mayor a menor. (debe imprimir quien será atendido y 
+  quien esta siendo atendido).

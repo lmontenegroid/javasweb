@@ -14,8 +14,8 @@ public abstract class Persona implements Acciones{
 	private String nombre;
 	private String apellido;
 	private Documento documento;
-	private Date fechaNacimiento;
-	private Date fechaIngreso;
+	private String fechaNacimiento;
+	private String fechaIngreso;
 
 	// Constructores
 	public Persona() {
@@ -23,7 +23,7 @@ public abstract class Persona implements Acciones{
 		this.id = contador;
 	}
 
-	public Persona(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso) {
+	public Persona(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso) {
 		contador++;
 		this.id = contador;
 		this.nombre = nombre;
@@ -94,19 +94,19 @@ public abstract class Persona implements Acciones{
 		this.documento = documento;
 	}
 
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Date getFechaIngreso() {
+	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(Date fechaIngreso) {
+	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 

@@ -1,0 +1,7 @@
+package comparadores;
+
+import entidades.Persona;
+
+public class OrdenEdad implements Compare<Persona>{
+
+}

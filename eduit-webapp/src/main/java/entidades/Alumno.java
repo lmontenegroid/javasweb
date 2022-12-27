@@ -7,7 +7,7 @@ public class Alumno extends Persona {
 
 	private String[] listaCursos;
 
-	public Alumno(String nombre, String apellido, Documento documento, Date fechaNacimiento, Date fechaIngreso, String[] listaCursos) {
+	public Alumno(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso, String[] listaCursos) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.listaCursos = listaCursos;
 	}

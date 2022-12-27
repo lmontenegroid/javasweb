@@ -1,16 +1,17 @@
 package excepciones;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 
 public class FechaException extends Exception {
 
-
 	private static final long serialVersionUID = 1L;
 
 	public static Scanner teclado = new Scanner(System.in);
 
-	public static Date validarFecha() {
+	public static String validarFecha() {
 
 		int dia = 0, mes = 0, anio = 0;
 
@@ -61,10 +62,10 @@ public class FechaException extends Exception {
 			System.err.println("Algo sucedió mal - " + e);
 		}
 
-		return new Date(anio-1900, mes-1, dia);
+		//LocalDate fecha = 
+		
+		return formato(LocalDate.of(anio , mes , dia));
 	}
-	
-	
 
 	public static int validarInt() {
 
@@ -79,6 +80,18 @@ public class FechaException extends Exception {
 		teclado.nextLine();
 
 		return valor;
+	}
+
+	public static String formato(LocalDate fecha) {
+
+		// Crea un formateador de fechas con el patrón "dd/MM/yyyy"
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        // Convierte la fecha en una cadena de caracteres
+        String fechaStr = fecha.format(formateador);
+        
+        return fechaStr;
+
 	}
 
 }
