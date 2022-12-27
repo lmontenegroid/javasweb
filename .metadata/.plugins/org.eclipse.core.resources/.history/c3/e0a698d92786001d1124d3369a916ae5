@@ -1,0 +1,13 @@
+package entidades;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Cursos {
+
+	Map<Integer, String> curso = new LinkedHashMap<>();
+	
+	int contador = 1;
+	
+	curso.put();
+}

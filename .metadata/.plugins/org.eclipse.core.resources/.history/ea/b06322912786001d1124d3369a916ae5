@@ -1,0 +1,7 @@
+package entidades;
+
+public class Cursos {
+
+	Map<Integer, Persona> mapa = new LinkedHashMap<>();
+	
+}

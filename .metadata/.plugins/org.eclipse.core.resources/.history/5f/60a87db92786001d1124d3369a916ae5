@@ -1,0 +1,10 @@
+package entidades;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Cursos {
+
+	Map<Integer, Persona> mapa = new LinkedHashMap<>();
+	
+}

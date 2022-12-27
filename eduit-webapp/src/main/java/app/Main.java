@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
@@ -7,6 +9,7 @@ import java.util.Scanner;
 import comparadores.OrdenEdad;
 import entidades.Administrativo;
 import entidades.Alumno;
+import entidades.Cursos;
 import entidades.Director;
 import entidades.Documento;
 import entidades.Persona;
@@ -23,7 +26,6 @@ public class Main {
 
 		int cantidad, cantidadCursos;
 
-		String[] cursos;
 		Persona persona;
 		Queue<Persona> personas;
 		String nombre, apellido, numDoc, carrera;
@@ -117,14 +119,8 @@ public class Main {
 				System.out.println("Ingrese la cantidad de cursos del profesor");
 				cantidadCursos = teclado.nextInt();
 
-				cursos = new String[cantidadCursos];
-
-				for (int j = 0; j < cantidadCursos; j++) {
-					System.out.println("Ingrese nombre de curso");
-					cursos[j] = teclado.next();
-				}
-
-				persona = new Profesor(nombre, apellido, documento, fechaNac, fechaIng, sueldo, cursos);
+				persona = new Profesor(nombre, apellido, documento, fechaNac, fechaIng, sueldo,
+						agregarCursos(cantidadCursos));
 
 				personas.add(persona);
 
@@ -141,14 +137,7 @@ public class Main {
 				System.out.println("Ingrese la cantidad de cursos del alumno");
 				cantidadCursos = teclado.nextInt();
 
-				cursos = new String[cantidadCursos];
-
-				for (int j = 0; j < cantidadCursos; j++) {
-					System.out.println("Ingrese nombre de curso");
-					cursos[j] = teclado.next();
-				}
-
-				persona = new Alumno(nombre, apellido, documento, fechaNac, fechaIng, cursos);
+				persona = new Alumno(nombre, apellido, documento, fechaNac, fechaIng, agregarCursos(cantidadCursos));
 
 				personas.add(persona);
 				break;
@@ -161,13 +150,47 @@ public class Main {
 		}
 
 		System.out.println("\nAtendiendo a las personas\n");
-		while(personas.size()>1) {
+		while (personas.size() > 1) {
 			System.out.println("Atendiendo a " + personas.poll().toString());
 			System.out.println("Por atender a " + personas.element().getNombre());
 		}
 		System.out.println("Atendiendo a " + personas.poll().toString());
 		System.out.println("No queda nadie por atender. Saludos!");
 
+	}
+
+	private static int[] agregarCursos(int cantidad) {
+		int[] cursos = new int[cantidad];
+
+		for (int i = 0; i < cursos.length; i++) {
+			while (true) {
+				System.out.print("Ingrese el curso [" + (i + 1) + "] : ");
+				String curso = teclado.next();
+				int idCurso = validarCurso(curso);
+				if (idCurso != -1) {
+					cursos[i] = idCurso;
+					break;
+				}
+				System.err.println("debe ingresar un curso valido: " + Cursos.getCursos().values());
+			}
+		}
+		return cursos;
+
+	}
+
+	// metodo para validar los cursos
+	private static int validarCurso(String curso) {
+		Map<Integer, String> cursos = Cursos.getCursos();
+
+		if (cursos.containsValue(curso)) {
+			for (Entry<Integer, String> cursoAuxiliar : cursos.entrySet()) {
+				if (cursoAuxiliar.getValue().equalsIgnoreCase(curso)) {
+					return cursoAuxiliar.getKey();
+				}
+			}
+		}
+
+		return -1;
 	}
 
 }

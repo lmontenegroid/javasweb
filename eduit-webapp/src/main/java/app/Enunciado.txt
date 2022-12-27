@@ -1,11 +1,8 @@
 
-A todo lo anterior del laboratorio 6, se le suma:
+Se ha solicitado el siguiente cambio en la lista de curos:
 
 
-• Mejorar el método que recibe fecha para que reciba un String 
-  con el formato dd/mm/aaaa ej: 15/03/1983.
-  
-• Se nos pide que después de ingresado todos las personas sean 
-  atendidas para tomar la asistencia del instituto por orden de 
-  edad de mayor a menor. (debe imprimir quien será atendido y 
-  quien esta siendo atendido).
+1. No deberá almacenar directamente el nombre del curso, sino, el id del curso.
+2. Este diccionario deberá asignar un id (numero único) auto incrementable a cada curso.
+3. El sistema al momento de ingresar el nombre del curso validara que el curso existe de
+	 lo contrario volverá a pedir el curso.

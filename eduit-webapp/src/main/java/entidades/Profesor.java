@@ -6,10 +6,10 @@ import java.util.Date;
 public class Profesor extends Persona {
 
 	private double sueldo;
-	private String[] listaCursos;
+	private int[] listaCursos;
 
 	public Profesor(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso,
-			double sueldo, String[] listaCursos) {
+			double sueldo, int[] listaCursos) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.sueldo = sueldo;
 		this.listaCursos = listaCursos;
@@ -27,11 +27,11 @@ public class Profesor extends Persona {
 	}
 
 	// gets n sets
-	public String[] getListaCursos() {
+	public int[] getListaCursos() {
 		return listaCursos;
 	}
 
-	public void setListaCursos(String[] listaCursos) {
+	public void setListaCursos(int[] listaCursos) {
 		this.listaCursos = listaCursos;
 	}
 

@@ -1,16 +1,17 @@
 package entidades;
 
 import java.util.Arrays;
-import java.util.Date;
 
 public class Alumno extends Persona {
 
-	private String[] listaCursos;
+	private int[] listaCursos;
 
-	public Alumno(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso, String[] listaCursos) {
+	public Alumno(String nombre, String apellido, Documento documento, String fechaNacimiento, String fechaIngreso, int[] listaCursos) {
 		super(nombre, apellido, documento, fechaNacimiento, fechaIngreso);
 		this.listaCursos = listaCursos;
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -18,11 +19,11 @@ public class Alumno extends Persona {
 	}
 
 	// gets n sets
-	public String[] getListaCursos() {
+	public int[] getListaCursos() {
 		return listaCursos;
 	}
 
-	public void setListaCursos(String[] listaCursos) {
+	public void setListaCursos(int[] listaCursos) {
 		this.listaCursos = listaCursos;
 	}
 
