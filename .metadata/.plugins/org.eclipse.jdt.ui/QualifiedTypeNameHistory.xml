@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="entidades.Alumno"/>
-    <fullyQualifiedTypeName name="entidades.Profesor"/>
-    <fullyQualifiedTypeName name="interfaces.Acciones"/>
-    <fullyQualifiedTypeName name="entidades.Administrativo"/>
-    <fullyQualifiedTypeName name="entidades.Director"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="excepciones.FechaException"/>
-    <fullyQualifiedTypeName name="interfaces.Constantes"/>
-    <fullyQualifiedTypeName name="excepciones.ExcepcionDocumento"/>
-    <fullyQualifiedTypeName name="comparadores.OrdenDocumento"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="entidades.Persona"/>
-    <fullyQualifiedTypeName name="entidades.Documento"/>
-    <fullyQualifiedTypeName name="enums.TiposDocumentos"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.jdbc.Driver"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="conexiones.AdministradorDeConexiones"/>
 </qualifiedTypeNameHistroy>

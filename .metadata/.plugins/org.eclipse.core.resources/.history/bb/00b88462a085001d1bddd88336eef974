@@ -1,8 +1,0 @@
-
-
-A todo lo anterior del laboratorio 6, se le suma:
-
-• No debe permitir agregar Elementos duplicados (Personas con Documentos iguales).
-• Debe mostrar la lista ordenada por Tipo y numero de Documento.
-• Cambiar a enums las constantes de documentos
-• Cambiar a listas los arrays de personas
