@@ -11,7 +11,7 @@ public class FechaException extends Exception {
 
 	public static Scanner teclado = new Scanner(System.in);
 
-	public static String validarFecha() {
+	public static LocalDate validarFecha() {
 
 		int dia = 0, mes = 0, anio = 0;
 
@@ -64,7 +64,7 @@ public class FechaException extends Exception {
 
 		//LocalDate fecha = 
 		
-		return formato(LocalDate.of(anio , mes , dia));
+		return LocalDate.of(anio , mes , dia);
 	}
 
 	public static int validarInt() {
@@ -85,7 +85,7 @@ public class FechaException extends Exception {
 	public static String formato(LocalDate fecha) {
 
 		// Crea un formateador de fechas con el patrón "dd/MM/yyyy"
-        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
         // Convierte la fecha en una cadena de caracteres
         String fechaStr = fecha.format(formateador);

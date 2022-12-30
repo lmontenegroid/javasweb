@@ -45,5 +45,21 @@ public class Acciones {
 
 		conexion.close();
 	}
+	
+	public static void eliminar(String numeroDoc) throws Exception {
+
+		Connection conexion = AdministradorDeConexiones.obtenerConexion();
+
+		String sql = "delete from administrativo where numDoc = " + numeroDoc;
+
+		Statement st = conexion.createStatement();
+
+		st.execute(sql);
+
+		st.close();
+
+		conexion.close();
+	}
+	
 
 }

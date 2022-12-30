@@ -1,8 +1,4 @@
 
-Se ha solicitado el siguiente cambio en la lista de curos:
 
-
-1. No deberá almacenar directamente el nombre del curso, sino, el id del curso.
-2. Este diccionario deberá asignar un id (numero único) auto incrementable a cada curso.
-3. El sistema al momento de ingresar el nombre del curso validara que el curso existe de
-	 lo contrario volverá a pedir el curso.
+Ejercicio con base de datos
+Se desea que se pida por consola los datos de un Administrativo y se pueda agregar a la base de datos.

@@ -3,32 +3,42 @@ package app;
 import java.time.LocalDate;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Scanner;
 
+import comparadores.OrdenEdad;
 import conexiones.Acciones;
 import entidades.Administrativo;
+import entidades.Alumno;
 import entidades.Cursos;
+import entidades.Director;
 import entidades.Documento;
+import entidades.Persona;
+import entidades.Profesor;
 import enums.TiposDocumentos;
+import excepciones.ExcepcionDocumento;
+import excepciones.FechaException;
 
 public class Main {
 
 	static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) throws Exception {
+		/*
+		Administrativo p = new Administrativo("Lucas", "Montenegro", new Documento(TiposDocumentos.DNI, "39147104"), LocalDate.of(2000, 9, 5),LocalDate.of(2000, 9, 5), 50000d);
 
-		Administrativo ad = new Administrativo("Lucas", "Montenegro", new Documento((TiposDocumentos.DNI), "39147104"), LocalDate.of(2022, 5, 11), LocalDate.of(2022, 5, 11), 50000d);
+		Acciones.agregar(p);*/
 		
-		Acciones.modificar(ad, "39147104");
 		
-		/*int cantidad, cantidadCursos;
+		int cantidad, cantidadCursos;
 
 		Persona persona;
 		Queue<Persona> personas;
 		String nombre, apellido, numDoc, carrera;
 		TiposDocumentos tipoDoc;
-		String fechaNac;
-		String fechaIng;
+		LocalDate fechaNac;
+		LocalDate fechaIng;
 		double sueldo;
 		byte rol;
 		Documento documento;
@@ -126,9 +136,8 @@ public class Main {
 				System.out.println("Ingrese el sueldo del administrativo");
 				sueldo = teclado.nextDouble();
 
-				persona = new Administrativo(nombre, apellido, documento, fechaNac, fechaIng, sueldo);
-
-				personas.add(persona);
+				Acciones.agregar(new Administrativo(nombre, apellido, documento, fechaNac, fechaIng, sueldo));
+				
 				break;
 			case 4:
 				System.out.println("Ingrese la cantidad de cursos del alumno");
@@ -145,15 +154,19 @@ public class Main {
 			}
 
 		}
+		
+		
+		
 
+		/*
 		System.out.println("\nAtendiendo a las personas\n");
 		while (personas.size() > 1) {
 			System.out.println("Atendiendo a " + personas.poll().toString());
 			System.out.println("Por atender a " + personas.element().getNombre());
 		}
 		System.out.println("Atendiendo a " + personas.poll().toString());
-		System.out.println("No queda nadie por atender. Saludos!");
-*/
+		System.out.println("No queda nadie por atender. Saludos!");*/
+
 	}
 
 	private static int[] agregarCursos(int cantidad) {
